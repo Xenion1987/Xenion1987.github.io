@@ -1,3 +1,243 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://Xenion1987.github.io/"
+languageCode = "en-us"
+theme = "aafu"
+
+[build]
+  writeStats = true
+
+[params]
+    title = "Xenion1987 Github"
+    author = "Marvin Moldenhauer"
+    description = "This is the Github portfolio page from Xenion1987 also known as Marvin Moldenhauer."
+    copyright = "Copyright (c) 2023, Marvin Moldenhauer"
+
+    [params.theme]
+        # Available themes are 'light', 'dark', 'ocean', and 'pinkish'
+        mainTheme = "dark"
+        # setting false below will hide 'aafu by darshan' displayed under the profile pic
+        showAttribute = true
+        singlePage = true
+
+    [params.favicons]
+        use = true
+        metas = '''
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#252627">
+        <link rel="shortcut icon" href="favicon.ico">
+        '''
+
+    # Profile section
+    [params.profile]
+        name = "Marvin Moldenhauer"
+        tagline = "Linux SysAdmin"
+        location = "Schauenburg, HE"
+        photo = "profile.png"
+
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
+
+        [[params.social.list]]
+            icon = "fab fa-github"
+            url = "https://Xenion1987.github.com/"
+            title = "GitHub"
+        [[params.social.list]]
+            icon = "fab fa-xing"
+            url = "https://www.xing.com/profile/Marvin_Moldenhauer/"
+            title = "Xing"		
+        [[params.social.list]]
+            icon = "fab fa-linkedin"
+            url = "https://www.linkedin.com/in/marvin-m-485b3a247/"
+            title = "LinkedIn"		
+        # [[params.social.list]]
+        #     icon = "fab fa-stack-overflow"
+        #     url = "#"
+        #     title = "StackOverflow"
+        # [[params.social.list]]
+        #     icon = "fab fa-twitter"
+        #     url = "#"
+        #     title = "Twitter"
+        # [[params.social.list]]
+        #     icon = "fab fa-orcid"
+        #     url = "#"
+        #     title = "Orcid"
+        # [[params.social.list]]
+        #     icon = "ai ai-google-scholar"
+        #     url = "#"
+        #     title = "Google Scholar"
+        # [[params.social.list]]
+        #     icon = "fab fa-researchgate"
+        #     url = "#"
+        #     title = "ResearchGate"
+
+    #Specify what is showin in the Accordion
+    [[params.showInAccordion]]
+        item = "aboutme"
+    [[params.showInAccordion]]
+        item = "experience"
+        expand = true   # true for the section that is initially expanded
+    [[params.showInAccordion]]
+        item = "education"
+    # [[params.showInAccordion]]
+    #     item = "publication"
+    [[params.showInAccordion]]
+        item = "project"
+    [[params.showInAccordion]]
+        item = "skill"
+    [[params.showInAccordion]]
+        item = "hobby"
+
+    [params.aboutme]
+        title = "About Me"
+        icon = "fas fa-user"
+        description = "This portfolio page is brand new and I still have to write some words to place here."
+
+    # Experience section
+    [params.experience]
+        title = "Experiences"
+        icon = "fas fa-briefcase"
+
+        [[params.experience.list]]
+            position = "Linux SysAdmin"
+            dates = "2022-09 - *Present*"
+            company = "dogado GmbH"
+            details = "Installation, configuration and maintenance of complex IT systems. Administration and monitoring of the IT system landscape. Planning and carrying out maintenance of the IT system landscape. Automation of daily tasks and deployment processes. Writing scripts (Python / Bash) according to the requirements of our customer projects."
+            url = "https://www.dogado.de/"
+        [[params.experience.list]]
+            position = "DevOps Engineer"
+            dates = "2022-09 - 2022-08"
+            company = "Plentysystems AG"
+            details = "- Recording and analysis of customer requirements in the area of Cloud, PaaS and SaaS. Processing of IT infrastructure technologies (Linux server, network). Creation and coordination of concepts based on customer requirements and architecture specifications. Advising projects and developers on the use of cloud technologies. Implementation and optimisation of cloud-based services and preparation of operational documentation. Evaluation of new technologies and cloud-based concepts."
+            url = "https://www.plentymarkets.com/"
+        [[params.experience.list]]
+            position = "Support & QA Engineer"
+            dates = "2019-03 - 2020-08"
+            company = "Plentysystems AG"
+            details = "Processing technical enquiries regarding the use and configuration of plentymarkets. Setting up a knowledge database and supporting the developers with the manual. Carrying out software tests. Participation in internal projects. Technical support for your product area in the customer forum. Responsible for answering questions in the forum. Continuous improvement of the support process in the team."
+            url = "https://www.plentymarkets.com/"
+        [[params.experience.list]]
+            position = "IT-SysAdmin"
+            dates = "2016-04 - 2017-06"
+            company = "AGM mbH"
+            details = ""
+            url = "https://www.agm-onside.de/"
+        [[params.experience.list]]
+            position = "Continuing education MCSA"
+            dates = "2016-02 - 2016-03"
+            company = "TGM Education GmbH"
+            details = ""
+            url = "https://www.tgm-education.de/"
+        [[params.experience.list]]
+            position = "IT-SysAdmin"
+            dates = "2013-05 - 2016-01"
+            company = "TGM Education GmbH"
+            details = ""
+            url = "https://www.tgm-education.de/"
+        [[params.experience.list]]
+            position = "Stabsdienstsoldat"
+            dates = "2006-07 - 2014-06"
+            company = "Bundeswehr"
+            details = ""
+            url = "https://www.bundeswehr.de/"
+
+    # Education section
+    [params.education]
+        title = "Education"
+        icon = "fas fa-graduation-cap"
+
+        [[params.education.list]]
+            degree = "IT-SysKfm"
+            college = "Martin-Luther-King-Schule"
+            dates = "2016-02 - 2016-03"
+            thesis_title = ""
+            thesis_url = "https://schule-ausbildung-kassel.de/schulen-kassel/martin-luther-king-schule/"
+    # Publication section
+    [params.publication]
+        title = "Publications"
+        icon = "fas fa-book"
+        #The order below determines the order in which the items appear in "Publications" section
+        format = ["date", "authors", "title", "journal"]
+        #If you don't want to group publications, comment the line below by adding # at the beginning
+        types = ["Journal Articles", "Proceedings"]
+
+        [[params.publication.list]]
+            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            authors = "F Last, F Second, P secondary"
+            date = "2018"
+            journal = "Journal of Field 52 (16), 9033-9044"
+            url = "#"
+            type = "Journal Articles"
+
+        [[params.publication.list]]
+            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            authors = "F Last, F Second, P secondary"
+            date = "2018"
+            journal = "Journal of Field 52 (16), 9033-9044"
+            url = "#"
+            type = "Journal Articles"
+		
+        [[params.publication.list]]
+            title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            authors = "F Last, F Second, P secondary"
+            date = "2018"
+            journal = "Journal of Field 52 (16), 9033-9044"
+            url = "#"
+            type = "Proceedings"
+
+    # Project section
+    [params.project]
+        title = "Projects"
+        icon = "fas fa-project-diagram"
+
+        [[params.project.list]]
+            title = "Access-InTech"
+            url = "https://access-intech.de/"
+            description = "My little side business"
+
+    # Skill section
+    [params.skill]
+        title = "Skills"
+        panelId = "skill-panel"
+        icon = "fas fa-cogs"
+
+        [[params.skill.list]]
+            skill = "Bash"
+            skillrating = 90
+        [[params.skill.list]]
+            skill = "Debian Linux"
+            skillrating = 80
+        [[params.skill.list]]
+            skill = "Docker"
+            skillrating = 80
+        [[params.skill.list]]
+            skill = "RHEL Linux"
+            skillrating = 70
+        [[params.skill.list]]
+            skill = "GitLab Actions"
+            skillrating = 50
+        [[params.skill.list]]
+            skill = "GitHub Actions"
+            skillrating = 50
+        [[params.skill.list]]
+            skill = "Python3"
+            skillrating = 40
+        [[params.skill.list]]
+            skill = "Kubernetes"
+            skillrating = 20
+
+    # Hobby section
+    [params.hobby]
+        title = "Hobbies"
+        icon = "fas fa-gamepad"
+
+        [[params.hobby.list]]
+            hobby = "My family"
+        [[params.hobby.list]]
+            hobby = "Walking the dog"
+        [[params.hobby.list]]
+            hobby = "Running"
+        [[params.hobby.list]]
+            hobby = "Listening audio books"

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "postcss-purgecss": "^5.0.0"
+  }
+}
